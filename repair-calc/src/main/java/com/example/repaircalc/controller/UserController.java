@@ -17,7 +17,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    //  http://localhost:8080/users
+    //  POST http://localhost:8080/users
     @PostMapping
     public ResponseEntity registration(@RequestBody UserEntity user) {
         try{
@@ -30,7 +30,7 @@ public class UserController {
         }
     }
 
-    // http://localhost:8080/users?id=2
+    // GET http://localhost:8080/users?id=2
     @GetMapping
     public ResponseEntity getOneUser(@RequestParam Long id) {
         try{
@@ -42,7 +42,7 @@ public class UserController {
         }
     }
 
-    // http://localhost:8080/users/3
+    // DELETE  http://localhost:8080/users/3
     @DeleteMapping("/{id}")
     public ResponseEntity deleteUser(@PathVariable Long id) {
         try{
