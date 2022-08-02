@@ -16,7 +16,6 @@ public class UserService {
     @Autowired
     private UserRepo userRepo;
 
-
     public UserEntity registration (UserEntity user) throws UserAlreadyExistException {
         if(userRepo.findByUsername(user.getUsername()) != null) {
             throw new UserAlreadyExistException("Пользователь с таким именем существует");

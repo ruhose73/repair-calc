@@ -18,7 +18,6 @@ public class UserEntity {
     private String username;
     private String password;
 
-
     public UserEntity() {
     }
 
@@ -45,6 +44,5 @@ public class UserEntity {
     public void setPassword(String password) {
         this.password = password;
     }
-
 
 }
